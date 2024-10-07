@@ -66,11 +66,9 @@ app.put("/medicos/:id", (req,res)=> {
 app.delete("/medicos/:id", (req,res)=> {
   
     const index = buscaMedicoId(req.params.id);
-    medicos.slice(index,1);
+    medicos.splice(index,1);
 
     res.status(200).json(medicos);
 });
-
-
 
 export default app;
